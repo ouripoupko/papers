@@ -7,12 +7,21 @@ Ever since the first days of PGP, the notion of a web of trust was always arroun
 As question 2 is a subjective question, the guide defines four levels of trust &ndash; unknown, untrusted, marginally trusted, or completely trusted, where the goal of these trust signatures is to establish a trust level for a specific individual, or at least trust that a specific public key represents a specific individual, by a delegation of trust along the graph of signatures. While this may be the only way to validate someone in a decentralized environment, there are some disadvantages in using subjective trust:
 1. Trust is not transitive. Consider the case of a republican father and a democrat son, while the son probably trust his father more than anyone else in the world, and his father has complete confidence in president Trump, the son still might completely mistrust him.
 2. Trust signatures clusterizes a large community into trust subgroups, while we might want to build services that are egaliterally accessible to all community members.
-3. Trus might be more easily gained for some people than others, not neccesseraly because they are more trust worthy, but rather because they have better political, social capabilities.
+3. Trust might be more easily gained for some people than others, not neccesseraly because they are more trust worthy, but rather because they have better political, social capabilities.
 
+Within the vision of self sovereign identities, there are use cases where we need to know who is in our community, for example for decision making. When the community is big, and it can be as big as the global community of all humanity, it is not easy to define who is in the community, if there is no central authority to decide on that. In this case I claim that not only that subjective trust wont help me much in defining the boundaries of the community, but rather an objective judgement is the key for this task. I call a graph of mutual signatures, where the claims made by the signers are objective claims &ndash; a trustless web of trust. In the global community of all humanity the politician and the shy, or even the honest and the crook, should all have the same egalitarien membership within the community.
 
-> ...it is only in the realm of human consciousness that we can define what it means to be human. - Democracy.earth
+In order to identify a community over self sovereign identities, there are two claims that need to be tested for each identity:
+1. That the identity represents an individual that is in this community (same as question 1 above)
+2. That there is no other identity within this community that represents the same individual
 
-Democracy.earth propose to use self recorded videos as a proof of identity. In their white paper \cite{DemocracyEarth:WhitePaper} they recommend that the person being recorded will say out loud a series of identifiers that can be used to singularly identify him. They claim that as algorithms lack awareness, only a person can recognize another person, or in other words . More formally, they differentiate between \emph{Reputation} - a social indicator that a given identity is to be trusted, and \emph{Singularity} - an individual indicator that certifies an identity is uniquely tied to a single person. This is somewhat similar to definition \ref{definition:public-identity-attributes} above, differentiating between public identity being truthful or unique, though maybe while truthfulness can be seen as an objective statement, it seems the Democracy.earth refer to subjective trust when they define \emph{Reputation}. They propose a process where random entities that are already accepted as trusted entities are given pairs of videos as described above and are asked to vote whether they represent the same person or not. These voting are then combined into a singularity score for the identity.
+The second question is hard. It is much harder for a human being then to a computer. Even with my closest friend, I can't know for sure that he doesn't have a second identity that he is holding away from me. A computer can do not a bad job in identify duplications within a big database of profile images, biometric information and such, though there still isn't a perfect human identifier for which the computer cannot be fooled.
+
+The first question, on the other hand, is quite simple for a human being and quite impossible for a computer.
+
+> ...it is only in the realm of human consciousness that we can define what it means to be human.  
+> algorithms lack any awareness about the patterns they are trained to recognize. ... only a person can recognize another person.  
+> &ndash; Democracy.earth<sup>[2](#fn2)</sup>
 
 We propose in this section a more direct approach, where we still rely on the human ability to recognize another human, yet we rely on algorithms to perform the exhaustive check whether a specific identifier is singularly used. For this purpose we define the following.
 
@@ -55,3 +64,4 @@ We claim that public identities, tested to be truthful and unique based on PWOIT
 Verifying uniqueness of on-line identities in a decentralized way seems like almost an impossible mission. Like all other published methods, the scheme proposed here is surely not a bulletproof scheme and is far from guarantying 100\% uniqueness. Yet it is not intended to be. Our goal is to make it harder to create a fake identity than a truthful and unique identity, making Sybil operators pay for any Sybil they create. In this section we discuss the vulnerabilities of our scheme and our take on each of them.
 
 <a name="fn1">1</a>: https://web.pa.msu.edu/reference/pgpdoc1.html
+<a name="fn2">2</a>: http://bit.ly/defpaper
