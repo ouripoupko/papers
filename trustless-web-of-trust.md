@@ -1,8 +1,18 @@
 # A Trustless Web-of-Trust &ndash; establishing identity uniqueness
 
-> ...it is only in the realm of human consciousness that we can define what it means to be human. Democracy.earth
+Ever since the first days of PGP, the notion of a web of trust was always arround &ndash; well what else &ndash; trust. The PGP user's guide<sup>[1](#fn1)</sup> define two questions that its web of trust should answer:
+1. Does the key actually belong to whom it appears to belong?
+2. Does it belong to someone you can trust to certify other keys?
 
- They claim that as algorithms lack awareness, only a person can recognize another person, or in other words . More formally, they differentiate between \emph{Reputation} - a social indicator that a given identity is to be trusted, and \emph{Singularity} - an individual indicator that certifies an identity is uniquely tied to a single person. This is somewhat similar to definition \ref{definition:public-identity-attributes} above, differentiating between public identity being truthful or unique, though maybe while truthfulness can be seen as an objective statement, it seems the Democracy.earth refer to subjective trust when they define \emph{Reputation}. They propose a process where random entities that are already accepted as trusted entities are given pairs of videos as described above and are asked to vote whether they represent the same person or not. These voting are then combined into a singularity score for the identity.
+As question 2 is a subjective question, the guide defines four levels of trust &ndash; unknown, untrusted, marginally trusted, or completely trusted, where the goal of these trust signatures is to establish a trust level for a specific individual, or at least trust that a specific public key represents a specific individual, by a delegation of trust along the graph of signatures. While this may be the only way to validate someone in a decentralized environment, there are some disadvantages in using subjective trust:
+1. Trust is not transitive. Consider the case of a republican father and a democrat son, while the son probably trust his father more than anyone else in the world, and his father has complete confidence in president Trump, the son still might completely mistrust him.
+2. Trust signatures clusterizes a large community into trust subgroups, while we might want to build services that are egaliterally accessible to all community members.
+3. Trus might be more easily gained for some people than others, not neccesseraly because they are more trust worthy, but rather because they have better political, social capabilities.
+
+
+> ...it is only in the realm of human consciousness that we can define what it means to be human. - Democracy.earth
+
+Democracy.earth propose to use self recorded videos as a proof of identity. In their white paper \cite{DemocracyEarth:WhitePaper} they recommend that the person being recorded will say out loud a series of identifiers that can be used to singularly identify him. They claim that as algorithms lack awareness, only a person can recognize another person, or in other words . More formally, they differentiate between \emph{Reputation} - a social indicator that a given identity is to be trusted, and \emph{Singularity} - an individual indicator that certifies an identity is uniquely tied to a single person. This is somewhat similar to definition \ref{definition:public-identity-attributes} above, differentiating between public identity being truthful or unique, though maybe while truthfulness can be seen as an objective statement, it seems the Democracy.earth refer to subjective trust when they define \emph{Reputation}. They propose a process where random entities that are already accepted as trusted entities are given pairs of videos as described above and are asked to vote whether they represent the same person or not. These voting are then combined into a singularity score for the identity.
 
 We propose in this section a more direct approach, where we still rely on the human ability to recognize another human, yet we rely on algorithms to perform the exhaustive check whether a specific identifier is singularly used. For this purpose we define the following.
 
@@ -43,3 +53,5 @@ We claim that public identities, tested to be truthful and unique based on PWOIT
 
 \subsection{Security and threats analysis}
 Verifying uniqueness of on-line identities in a decentralized way seems like almost an impossible mission. Like all other published methods, the scheme proposed here is surely not a bulletproof scheme and is far from guarantying 100\% uniqueness. Yet it is not intended to be. Our goal is to make it harder to create a fake identity than a truthful and unique identity, making Sybil operators pay for any Sybil they create. In this section we discuss the vulnerabilities of our scheme and our take on each of them.
+
+<a name="fn1">1</a>: https://web.pa.msu.edu/reference/pgpdoc1.html
