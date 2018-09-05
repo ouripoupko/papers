@@ -17,7 +17,7 @@ In order to identify a community over self sovereign identities, there are two f
 1. That the identity represents an individual that is in this community (same as question 1 above)
 2. That there is no other identity within this community that represents the same individual
 
-The second question is hard. It is much harder for a human being then to a computer. Even with my closest friend, I can't know for sure that he doesn't have a second identity that he is holding away from me. A computer can do not a bad job in identify duplications within a big database of profile images, biometric information and such, though there still isn't a perfect human identifier for which the computer cannot be fooled.
+The second question is hard. It is much harder for a human being then to a computer. Even with my closest friend, I can't know for sure that he doesn't have a second identity that he is holding away from me. A computer can do quite a good job in identifying duplicates within a big database of profile images, biometric information and such, though there still isn't a perfect human identifier for which the computer cannot be fooled.
 
 The first question, on the other hand, is quite simple for a human being and quite impossible for a computer.
 
