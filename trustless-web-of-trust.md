@@ -1,6 +1,6 @@
 # A Trustless Web-of-Trust &ndash; establishing identity uniqueness
 
-Ever since the first days of PGP, the notion of a web of trust was always arround &ndash; well what else &ndash; trust. The PGP user's guide<sup>[1](#fn1)</sup> define two questions that its web of trust should answer:
+Ever since the first days of PGP, the notion of a web of trust was always arround &ndash; well what else &ndash; trust. [The PGP user's guide](https://web.pa.msu.edu/reference/pgpdoc1.html) defines two questions that its web of trust should answer:
 1. Does the key actually belong to whom it appears to belong?
 2. Does it belong to someone you can trust to certify other keys?
 
@@ -23,7 +23,7 @@ The first question, on the other hand, is quite simple for a human being and qui
 
 > ...it is only in the realm of human consciousness that we can define what it means to be human.  
 > algorithms lack any awareness about the patterns they are trained to recognize. ... only a person can recognize another person.  
-> &ndash; Democracy.earth<sup>[2](#fn2)</sup>
+> &ndash; [Democracy.earth](http://bit.ly/defpaper)
 
 To achieve the two factors listed above, we coin the term &ndash; Uniquely Verifiable Identifiers. A UVI is an identifier (profile image, fingerprints, national ID number or anything else) that holds the following characteristics:
 1. A human being with access to another individual and his UVI can evaluate with high probability, while using standard means, whether the UVI identifies the individual or not.
@@ -40,13 +40,16 @@ To demonstrate a simple use of UVI for decision making within a community, we st
 We claim that public identities, tested to be truthful and unique based on TWOT could have provided the Catalan people a safe and trusted way to cast their votes. In this case it is enough to identify the voters by their Spanish ID, validating their registered home address to be Catalan residents. The identification process can be achieved in a decentralized way, by people validating each other profiles, signing the ID number within the profile, to signify that they verified each other identity and home address. Given public access to this signatures anyone can verify that no one is registered twice and the referendum can be held online, without relying on any central authorities for the identification process.
 
 ## Defending sybils
+
+Sybil identification algorithms, like [SybilGuard](https://ieeexplore.ieee.org/document/4542826/), [SybilInfer](https://www.semanticscholar.org/paper/SybilInfer%3A-Detecting-Sybil-Nodes-using-Social-Danezis-Mittal/653fbfbad9d565dd5e5e0d48b6bb32dd02e8f157), [SybilDefender](https://ieeexplore.ieee.org/document/6195572/) and others <span style="background-color: #FFFF00">(Caution, I need to verify my claims here and check that these links are relevant)</span> are based on graph structure to differentiate between sybils (fake accounts) and honest identities. They have an underlying assumption that a sybil can create an edge in the graph with an honest identity with a lower probability than two honest identities. Under this assumption some structure differentiation is expected between sybils and clusters of honest identities. It is my claim that these differentiations are more easily identified when the underlying graph over honest nodes is random, since if this graph is clustered it may be harder to ddistinguish between sybils to partially isolated clusters of honest identities. A TWOT can serve as such a random graph. If I don't need to trust the person that I am identifying, then I can identify random people.
+
+I therefor suggest the following procedure for defining communities with unique identities, based on the assumption that there exists a UVI that meets the above requirements with high enough probability:
+1. Individuals create their own self sovereign identities and embed in their profiles a UVI that identifies them.
+2. People randomely meet with other people for mutual identification &ndash; validating that the UVI in the other person profile indeed identifies him and cryptographically signing this UVI to express this validation.
+3. 
+
 \ouri{TBD - on the benefits of PWOIT - a randomized graph with very high conductance, tying to the preventing sybil infiltration paper}
 
 
 \subsection{Security and threats analysis}
 Verifying uniqueness of on-line identities in a decentralized way seems like almost an impossible mission. Like all other published methods, the scheme proposed here is surely not a bulletproof scheme and is far from guarantying 100\% uniqueness. Yet it is not intended to be. Our goal is to make it harder to create a fake identity than a truthful and unique identity, making Sybil operators pay for any Sybil they create. In this section we discuss the vulnerabilities of our scheme and our take on each of them.
-
-## References
-
-<a name="fn1">1</a>: https://web.pa.msu.edu/reference/pgpdoc1.html  
-<a name="fn2">2</a>: http://bit.ly/defpaper
