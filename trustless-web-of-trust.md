@@ -19,7 +19,7 @@ In order to define a community of self-sovereign identities, there are two requi
 1. The identity should be truthful, meaning that it should represent an individual that is in this community (same as question 1 above)
 2. The identity should be unique, meaning that there is no other identity within this community that represents the same individual
 
-The second requirement is hard to validate. It is impossible for a human being and quite hard for a computer. Trust will not help me. Even with my closest friend, I cannot know for sure that he doesn't have a second identity that he is holding away from me. A computer can do quite a good job in scanning profile images, biometric information and such and identifying duplicates, but there still isn't a perfect human identifier for which the computer cannot be fooled.
+The second requirement is hard to validate. It is impossible for a human being and quite hard for a computer. Trust will not help me. Even with my closest friend, I cannot know for sure that he does not have a second identity that he is holding away from me. A computer can do quite a good job in scanning profile images, biometric information and such and identifying duplicates, but there still isn't a perfect human identifier for which the computer cannot be fooled.
 
 The first question, on the other hand, is quite simple for a human being and quite impossible for a computer.
 
