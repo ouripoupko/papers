@@ -4,8 +4,8 @@ Ever since the first days of PGP, the notion of a web of trust was always around
 > 1. Does the key actually belong to whom it appears to belong?
 > 2. Does it belong to someone you can trust to certify other keys?
 
-The second question involves subjective trust. PGP asks the signer to designate the signed person as either unknown, untrusted, marginally trusted, or completely trusted. It then delegates trust along the web to establish a trust level for a specific individual, or at least trust that a specific public key represents a specific individual. While this may be the only way to validate someone in a decentralized environment, there are some disadvantages in using subjective trust:
-1. It is not transitive. Consider the case of a father and a son, both US citizens, where the father is a republican and the son is a democrat. Though the son probably completely trust his father, and his father probably has complete faith in President Trump, there is no reason to believe that the son will have any faith in him, not even minimal.
+The second question entails subjective trust. PGP asks the signer to designate the signed person as either unknown, untrusted, marginally trusted, or completely trusted. It then delegates trust along the web to establish a trust level for a specific individual, or at least trust that a specific public key represents a specific individual. While this may be the only way to validate someone in a decentralized environment, there are some disadvantages in using subjective trust:
+1. It is not transitive. My father is a republican, He voted for President Trump. Does this mean that I trust President Trump?
 2. It clusterizes a large community into subgroups depending on the individual acquaintances, while we might want to build services that are equally accessible to all community members.
 3. It might be more easily gained for some people than others, not necessarily because they are more trust worthy, but rather because they have better political and social skills.
 
