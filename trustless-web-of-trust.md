@@ -13,7 +13,7 @@ With the use of self sovereign identities we want also to define decentralized (
 
 ## Communities
 
-In order to identify a community over self sovereign identities, there are two requirements that should hold for each identity:
+In order to define a community over self sovereign identities, there are two requirements that should hold for each identity:
 1. The identity should be truthful, meaning that it should represent an individual that is in this community (same as question 1 above)
 2. The identity should be unique, meaning that there is no other identity within this community that represents the same individual
 
