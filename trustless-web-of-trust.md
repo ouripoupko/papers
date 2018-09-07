@@ -1,15 +1,15 @@
 # A Trustless Web-of-Trust &ndash; establishing identity uniqueness
 
 Ever since the first days of PGP, the notion of a web of trust was always around &ndash; well what else &ndash; trust. [The PGP user's guide](https://web.pa.msu.edu/reference/pgpdoc1.html) defines two questions that it aims to answer with a web of trust:
-1. Does the key actually belong to whom it appears to belong?
-2. Does it belong to someone you can trust to certify other keys?
+> 1. Does the key actually belong to whom it appears to belong?
+> 2. Does it belong to someone you can trust to certify other keys?
 
 The second question involves subjective trust. PGP asks the signer to designate the signed person as either unknown, untrusted, marginally trusted, or completely trusted. It then delegates trust along the web to establish a trust level for a specific individual, or at least trust that a specific public key represents a specific individual. While this may be the only way to validate someone in a decentralized environment, there are some disadvantages in using subjective trust:
 1. It is not transitive. Consider the case of a father and a son, both US citizens, where the father is a republican and the son is a democrat. Though the son probably completely trust his father, and his father probably has complete faith in President Trump, there is no reason to believe that the son will have any faith in him, not even minimal.
 2. It clusterizes a large community into subgroups depending on the individual acquaintances, while we might want to build services that are equally accessible to all community members.
 3. It might be more easily gained for some people than others, not necessarily because they are more trust worthy, but rather because they have better political and social skills.
 
-With the use of self sovereign identities we want also to define decentralized (online) communities. One tempting approach might be to let any (online) community member to point on the people that he knows to belong to the (real) community. A computer algorithm can then accept them as new members, if enough members endorsed them. When the community is big, and it can be as big as the global community of all humanity, it is not easy to identify the real members of the community, if there is no central authority to do so. In this case we claim not only that subjective trust wont help us much in identifying the correct community members, but rather that an objective endorsement &ndash; one that does not require the endorser even to know the endorsed person &ndash; is the best key for establishing community membership. We call a graph of such endorsements, where the claims made by the signers are objective claims, a Trustless Web-of-trust (TWOT). In the global community of all humanity the politician and the shy, or even the honest and the crook, should all have the same egalitarian membership within the community.
+With the use of self sovereign identities we want also to define decentralized (online) communities. One tempting approach might be to let any (online) community member to point on the people that he knows to belong to the (real) community. A computer algorithm can then accept them as new members, if enough members endorsed them. When the community is big, and it can be as big as the global community of all humanity, it is not easy to identify the real members of the community, if there is no central authority to do so. In this case we claim not only that subjective trust won't help us much in identifying the correct community members, but rather that an objective endorsement &ndash; one that does not require the endorser even to know the endorsed person &ndash; is the best key for establishing community membership. We call a graph of such endorsements, where the claims made by the signers are objective claims, a Trustless Web-of-trust (TWOT). In the global community of all humanity the politician and the shy, or even the honest and the crook, should all have the same egalitarian membership within the community.
 
 ## Communities
 
@@ -17,7 +17,7 @@ In order to identify a community over self sovereign identities, there are two r
 1. The identity should be truthful, meaning that it should represent an individual that is in this community (same as question 1 above)
 2. The identity should be unique, meaning that there is no other identity within this community that represents the same individual
 
-The second requirement is hard to validate. It is impossible for a human being and quite hard for a computer. Trust wont help me. Even with my closest friend, I can't know for sure that he doesn't have a second identity that he is holding away from me. A computer can do quite a good job in scanning profile images, biometric information and such and identifying duplicates, but there still isn't a perfect human identifier for which the computer cannot be fooled.
+The second requirement is hard to validate. It is impossible for a human being and quite hard for a computer. Trust won't help me. Even with my closest friend, I can't know for sure that he doesn't have a second identity that he is holding away from me. A computer can do quite a good job in scanning profile images, biometric information and such and identifying duplicates, but there still isn't a perfect human identifier for which the computer cannot be fooled.
 
 The first question, on the other hand, is quite simple for a human being and quite impossible for a computer.
 
